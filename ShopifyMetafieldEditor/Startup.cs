@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ShopifyMetafieldEditor
+namespace ShopifyMetaFieldEditor
 {
     public class Startup
     {
@@ -31,6 +31,7 @@ namespace ShopifyMetafieldEditor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.Configure<ShopifyAuthenticationOptions>(Configuration.GetSection("Shopify"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
