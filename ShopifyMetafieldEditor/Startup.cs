@@ -32,6 +32,8 @@ namespace ShopifyMetaFieldEditor
             });
 
             services.Configure<ShopifyAuthenticationOptions>(Configuration.GetSection("Shopify"));
+            
+            services.AddScoped<IShopifyFactory, ShopifyFactory>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

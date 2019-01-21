@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyMetafieldEditor", "ShopifyMetafieldEditor\ShopifyMetafieldEditor.csproj", "{44A7B509-2DA8-4DBA-8303-39A7A6B32AD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopifyMetaFieldEditor", "ShopifyMetafieldEditor\ShopifyMetaFieldEditor.csproj", "{44A7B509-2DA8-4DBA-8303-39A7A6B32AD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,34 @@
+﻿@page
+@model ShopifyMetaFieldEditor.Pages.MetaFieldsModel
+@{
+    ViewData["Title"] = "Metafields";
+}
+
+<h1>Metafields for @Model.Product.Title</h1>
+
+@foreach (var metaField in Model.MetaFields)
+{
+    <form asp-page="/MetaFields" asp-route-productid="@Model.Product.Id" asp-page-handler="update" method="post">
+        <input type="hidden" asp-for="@metaField.Id"/>
+        <input type="hidden" asp-for="@metaField.OwnerId"/>
+        <table>
+            <tr>
+                <td><input type="text" asp-for="@metaField.Namespace"/></td>
+                <td><input type="text" asp-for="@metaField.Key"/></td>
+                <td><input type="text" asp-for="@metaField.Value"/></td>
+                <td><button type="submit">Update</button></td>
+            </tr>
+        </table>
+    </form>
+}
+
+<form asp-page="/MetaFields" asp-route-productid="@Model.Product.Id" asp-page-handler="create" method="post">
+    <table>
+        <tr>
+            <td><input type="text" asp-for="@Model.CreateModel.Namespace" /></td>
+            <td><input type="text" asp-for="@Model.CreateModel.Key" /></td>
+            <td><input type="text" asp-for="@Model.CreateModel.Value" /></td>
+            <td><button type="submit">Create</button></td>
+        </tr>
+    </table>
+</form>
